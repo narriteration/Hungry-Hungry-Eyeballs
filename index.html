@@ -15,11 +15,16 @@
 
     <title>Project0 Game | Chelsea Mangold</title>
 </head>
-
 <body>
     <div class="container">
         <h1 class="text-center">3...2...1...Race!</h1>
-        <table class="table">
+        <h3 class="text-center">Choose a color and press your key to move your piece forward</h3>
+        <h3 class="text-center">Player 1: "z" | Player 2: "m"</h6>
+        <div class="messages">#####MESSAGES######</div>
+        <br>
+        <br>
+        <button type="button" class="btn-group btn btn-primary">Reset</button>
+        <table class="table board">
             <thead>
                 <tr>
                     <th>#</th>
@@ -34,19 +39,21 @@
                     <th>A7</th>
                     <th>A8</th>
                     <th>A9</th>
-                    <th>Finish</th>
+                    <th id="finish">Finish</th>
                 </tr>
             </thead>
-
+            <br>
+            <br>
+            <br>
             <tbody>
                 <tr>
-                    <th scope="row">Player 1</th>
+                    <th scope="row">Player Z</th>
+                    <td id="startZ"></td>
                     <td></td>
                     <td></td>
                     <td></td>
                     <td></td>
-                    <td></td>
-                    <td></td>
+                    <td>eeee</td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -55,8 +62,8 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <th scope="row">Player 2</th>
-                    <td></td>
+                    <th scope="row">Player M</th>
+                    <td id="startM"></td>
                     <td></td>
                     <td></td>
                     <td></td>
@@ -71,8 +78,9 @@
                 </tr>
             </tbody>
         </table>
-
-
+        <br>
+        <br>
+        <br>
         <table class="table table-sm table-inverse"> <!-- start of player score table-->
             <thead>
                 <tr>
