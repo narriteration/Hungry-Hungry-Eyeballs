@@ -1,0 +1,15 @@
+body {
+  color: red;
+}
+
+#start {
+  color: green;
+}
+
+#finish {
+  background-color: blue;
+}
+
+div.messages {
+  text-align: center;
+}
