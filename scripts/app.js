@@ -13,26 +13,41 @@ $(document).ready(function() {
     $('#startZBlue').html(blueImage); // point to #startZBlue and insert the html for blueImage is
     $('#startMRed').html(redImage); // point to #startMRed
 
+    $('body').keydown(function(el){   // action to happen when specific two keys pressed
+        el.preventDefault();
+        console.log('You pressed a key!');
+        if (el.which === 90) {
+        moveImageRight();
+        }
+        if (el.which === 77) {
+        moveImageRight();
+        }
+    });
 
-    // function resetGame() {
-    //     $('td').html(''); // clear board
-    //     console.log("All spaces are cleared.");
-    //     $('.messages').html("Game is ready. Grab an opponent and click Z or M key to begin racing.")
-    // };
+    //$( "li.item-a" ).parent().css( "background-color", "red" );
+    function moveImageRight() {
+        var parent = $('#blueDot').parent();
+        console.log(parent);
+    }
+
+
+}); // KEEP. = end of document ready function
+
+
+
+
+
+// m	77
+// z  90
+
+
+// function resetGame() {
+//     $('td').html(''); // clear board
+//     console.log("All spaces are cleared.");
+//     $('.messages').html("Game is ready. Grab an opponent and click Z or M key to begin racing.")
+// };
 
 //     button.on('click', resetGame())
-//
-//     $('body').keydown(function(el){
-//         el.preventDefault();
-//         console.log('You pressed a key!');
-//         if (el.which === 'z') {
-//             $('#blueDot').moveDotRight();
-//         }
-//         if (el.which === 'm') {
-//             $('#redDot').moveDotRight();
-//         }
-//     });
-}); // KEEP. = end of document ready function
 
 
     // function showGameStartMessage() {
