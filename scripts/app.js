@@ -10,35 +10,24 @@ $(document).ready(function() {
     var blueImage = '<img src="assets/blueDot.png" alt="a blue dot" height = "20" width = "20" id="blueDot">'
     var redImage = '<img src="assets/redDot.png" alt="a red dot" height = "20" width = "20" id="redDot">'
 
-    $('#startZBlue').html(blueImage); // point to #startZBlue and insert the html for blueImage is
-    $('#startMRed').html(redImage); // point to #startMRed
+    $('#startZBlue').html(blueImage); // point to #startZBlue and insert the html for blueImage
+    $('#startMRed').html(redImage); // point to #startMRed and insert the html for redImage
 
     $('body').keydown(function(el){   // action to happen when specific two keys pressed
         el.preventDefault();
         console.log('You pressed a key!');
-        if (el.which === 90) {
-        moveImageRight();
+        if (el.which === 90) {              // z key
+        // $('#blueDot').parent().next().css( "background-color", "blue" );
+        $('#blueDot').parent().next().html(blueImage);
+        $('#blueDot').parent().html('');
         }
-        if (el.which === 77) {
-        moveImageRight();
+        if (el.which === 77) {              // m key
+        $('#redDot').parent().next().html(redImage);
+        $('#redDot').parent().html('');
         }
     });
 
-    //$( "li.item-a" ).parent().css( "background-color", "red" );
-    function moveImageRight() {
-        var parent = $('#blueDot').parent();
-        console.log(parent);
-    }
-
-
 }); // KEEP. = end of document ready function
-
-
-
-
-
-// m	77
-// z  90
 
 
 // function resetGame() {
