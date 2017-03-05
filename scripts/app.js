@@ -36,6 +36,15 @@ $(document).ready(function() {
         $('#startMRed').html(redImage);
     });
 
+    function gameIsOver() {
+      var winnerPlayer = $('.end').html() === (blueImage || redImage);
+      console.log(winnerPlayer + " is the winner!");
+      return winnerPlayer;
+    }
+
+    gameIsOver();
+
+
 }); // KEEP. = end of document ready function
 
 
@@ -46,6 +55,14 @@ $(document).ready(function() {
 
 
 // EVERYTHING BELOW = FUNCTIONS
+
+
+
+// if (   ($('#endZBlue').html()) === blueImage || ($('#endMRed').html()) === redImage  ) {
+//     console.log("Stop the game, you've won!");
+//     alert("Someone wins!")
+
+
 
 // function movePlayerZ() {
 //   if the start box of PlayerZ is !empty,
