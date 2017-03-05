@@ -8,7 +8,7 @@
     <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="css/main.css">
     <!-- JS -->
     <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
     <script src="scripts/app.js"></script>
@@ -24,11 +24,11 @@
         <br>
         <button type="button" class="btn-group btn btn-primary">Reset</button>
         <table class="table board">
-            <thead>
+            <thead>                                     <!-- creates header for game table-->
                 <tr>
                     <th>#</th>
-                    <th>Start</th>
-                    <th>A0</th> <!-- creates ten free spaces for players to move forward into-->
+                    <th id="start">Start</th>
+                    <th>A0</th>
                     <th>A1</th>
                     <th>A2</th>
                     <th>A3</th>
@@ -44,35 +44,35 @@
             <br>
             <br>
             <br>
-            <tbody>
+            <tbody>                                     <!-- start of game table for player pieces-->
                 <tr>
                     <th scope="row">Player Z</th>
                     <td id="startZBlue"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
                     <td class="end"></td>
                 </tr>
                 <tr>
                     <th scope="row">Player M</th>
                     <td id="startMRed"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
+                    <td class="muddyPath"></td>
                     <td class="end"></td>
                 </tr>
             </tbody>
