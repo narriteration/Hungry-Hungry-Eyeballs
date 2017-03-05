@@ -27,23 +27,23 @@ $(document).ready(function() {
         }
     });
 
+    $('button').on('click', function () {
+        console.log("The reset button has been clicked!");
+        $('td').html(''); // clear board
+        console.log("All spaces are cleared.");
+        $('.messages').html("Game is ready. Grab an opponent and click Z or M key to begin racing.");
+        $('#startZBlue').html(blueImage);
+        $('#startMRed').html(redImage);
+    });
+
 }); // KEEP. = end of document ready function
 
 
-// function resetGame() {
-//     $('td').html(''); // clear board
-//     console.log("All spaces are cleared.");
-//     $('.messages').html("Game is ready. Grab an opponent and click Z or M key to begin racing.")
-// };
+
 
 //     button.on('click', resetGame())
 
 
-    // function showGameStartMessage() {
-    //     // if (playerOneKeyAssignment == true) || (playerTwoKeyAssignment == true)
-    //     console.log("The game has begun!");
-    // };
-    // Start it up!
 
 // EVERYTHING BELOW = FUNCTIONS
 
