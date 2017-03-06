@@ -2,7 +2,7 @@
 
     console.log("My JS is connected! Woohoo!")
 
-    $('.messages').html("Game is ready. Click Z or M key to begin race");
+    $('.messages').html("The eyeballs are salivating. Pick a player, find an opponent, and press your key to start flying forward!");
     $('#startZBlue').html(blueImage);
     $('#startMRed').html(redImage);
 
@@ -17,40 +17,43 @@
     });
 
 
-    $('body').keydown(function (el) {                         // action to happen when specific two keys pressed
+    $('body').keydown(function (el) {
         el.preventDefault();
-        if (el.which === 90) {                               // z key
+        if (el.which === 90) {
             $('#blueDot').parent().next().html(blueImage);
             $('#blueDot').parent().html('');
             console.log('changed blue dot position');
         };
-        if (el.which === 77) {                               // m key
-            $('#redDot').parent().next().html(redImage);
-            $('#redDot').parent().html('');
+        if (el.which === 77) {
+            $('#greenEyeball').parent().next().html(redImage);
+            $('#greenEyeball').parent().html('');
             console.log('changed red dot position');
         }
         evaluateIfWinner();
     });
+
+
+
+}); //end of document ready function
+
+var $board = $('.board');
+var $messages = $('.messages');
+var $button = $('.btn');
+var blueImage = '<img src="assets/flying_pink_eyeball.gif" alt="cute, animated, purple, pixelated eyeball" height = "30" width = "auto" id="blueDot">';
+var redImage = '<img src="assets/green_pixel_eyeball.gif" alt="a cute, morphing, animated, green, pixelated eyeball" height = "30" width = "auto" id="greenEyeball">';
+var pizza = '<img src="assets/pizza_gif.gif" alt="pixelated, animated pizza is dripping cheese" align="center" height="30" width="auto"'
+var redWinsMessage = 'Red wins!';
+var blueWinsMessage = 'Blue wins!';
+
 
 ///////////////////// FUNCTIONS  ////////////////////////
 
     function evaluateIfWinner(el) {
         if ($('#blueDot').parent().html() === '<img src="assets/flying_pink_eyeball.gif" alt="cute, animated, purple, pixelated eyeball" height = "30" width = "auto" id="blueDot">') {
           console.log("game over! winner is Player Z!");
-        } else if ($('#redDot').parent() === $('.end')){
+        } else if ($('#greenEyeball').parent() === $('.end')){
           console.log("game over! winner is Player M!");
         } else {
           console.log("keep clicking. game still in play!");
         }
       };
-
-}); // <=====KEEP THIS. Is end of document ready function
-
-var $board = $('.board');
-var $messages = $('.messages');
-var $button = $('.btn');
-var blueImage = '<img src="assets/flying_pink_eyeball.gif" alt="cute, animated, purple, pixelated eyeball" height = "30" width = "auto" id="blueDot">';
-var redImage = '<img src="assets/green_pixel_eyeball.gif" alt="a cute, morphing, animated, green, pixelated eyeball" height = "30" width = "auto" id="redDot">';
-var pizza = '<img src="assets/pizza_gif.gif" alt="pixelated, animated pizza is dripping cheese" align="center" height="30" width="auto"'
-var redWinsMessage = 'Red wins!';
-var blueWinsMessage = 'Blue wins!';
