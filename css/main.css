@@ -1,15 +1,31 @@
-body {
-  color: red;
-}
-
 #start {
-  color: green;
+  background: grey;
 }
 
 #finish {
-  background-color: blue;
+  background: red;
+  text-align: center;
 }
+
+
+
 
 div.messages {
   text-align: center;
+  color: red;
+}
+
+
+.muddyPath {
+  background-image: url(../assets/mud2.png);
+}
+
+.container {
+  background-image: url(../assets/checkered-pattern-vector.jpg);
+}
+
+
+table {
+  text-align: center;
+  background-color: grey;
 }
