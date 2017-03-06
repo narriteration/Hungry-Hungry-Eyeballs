@@ -3,7 +3,7 @@
     console.log("My JS is connected! Woohoo!")
 
     $('.messages').html("The eyeballs are salivating. Pick a player, find an opponent, and press your key to start flying forward!");
-    $('#startZBlue').html(blueImage);
+    $('#startZBlue').html(pinkEyeballImage);
     $('#startMRed').html(greenEyeballImage);
 
     $('button').on('click', function () {
@@ -11,7 +11,7 @@
         $('td').html(''); // clear board
         console.log("All spaces are cleared.");
         $('.messages').html("The eyeballs are salivating. Pick a player, find an opponent, and press your key to start flying forward!");
-        $('#startZBlue').html(blueImage);
+        $('#startZBlue').html(pinkEyeballImage);
         $('#startMRed').html(greenEyeballImage);
         $('.end').html(pizza);
     });
@@ -20,7 +20,7 @@
     $('body').keydown(function (el) {
         el.preventDefault();
         if (el.which === 90) {
-            $('#blueDot').parent().next().html(blueImage);
+            $('#blueDot').parent().next().html(pinkEyeballImage);
             $('#blueDot').parent().html('');
             console.log('changed blue dot position');
         };
@@ -39,7 +39,7 @@
 var $board = $('.board');
 var $messages = $('.messages');
 var $button = $('.btn');
-var blueImage = '<img src="assets/flying_pink_eyeball.gif" alt="cute, animated, purple, pixelated eyeball" height = "30" width = "auto" id="blueDot">';
+var pinkEyeballImage = '<img src="assets/flying_pink_eyeball.gif" alt="cute, animated, purple, pixelated eyeball" height = "30" width = "auto" id="pinkEyeball">';
 var greenEyeballImage = '<img src="assets/green_pixel_eyeball.gif" alt="a cute, morphing, animated, green, pixelated eyeball" height = "30" width = "auto" id="greenEyeball">';
 var pizza = '<img src="assets/pizza_gif.gif" alt="pixelated, animated pizza is dripping cheese" align="center" height="30" width="auto"'
 var redWinsMessage = 'Red wins!';
