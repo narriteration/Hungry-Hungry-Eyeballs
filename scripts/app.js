@@ -82,8 +82,8 @@
 var $board = $('.board');
 var $messages = $('.messages');
 var $button = $('.btn');
-var blueImage = '<img src="assets/racing_bus_game_character/PNG/1.png" alt="a bus ready to race to the right" height = "20" width = "auto" id="blueDot">';
-var redImage = '<img src="assets/racing_car_game_character/png/1.png" alt="a car ready to race to the right" height = "20" width = "auto" id="redDot">';
+var blueImage = '<img src="assets/flying_pink_eyeball.gif" alt="cute, animated, purple, pixelated eyeball" height = "30" width = "auto" id="blueDot">';
+var redImage = '<img src="assets/green_pixel_eyeball.gif" alt="a cute, morphing, animated, green, pixelated eyeball" height = "30" width = "auto" id="redDot">';
 var redWinsMessage = 'Red wins!';
 var blueWinsMessage = 'Blue wins!';
 
