@@ -1,31 +1,26 @@
-#start {
-  background: grey;
-}
+
 
 #finish {
-  background: red;
   text-align: center;
 }
 
-
-
+.end {
+  background: red;
+}
 
 div.messages {
   text-align: center;
   color: red;
 }
 
-
 .muddyPath {
   background-image: url(../assets/mud2.png);
 }
 
 body {
-  background-image: url(../assets/checkered-pattern-vector.jpg);
+  background-image: url(../assets/backgrounds/cloud_pixel_transparent_background.gif);
 }
 
-
-table {
+table{
   text-align: center;
-  background-color: grey;
 }
