@@ -7,8 +7,6 @@
   display: block;
 }
 
-
-
 div.messages {
   text-align: center;
   color: red;
@@ -25,13 +23,3 @@ body {
 table{
   text-align: center;
 }
-
-/*
-.muddyPath {
-  background-image: url(../assets/mud2.png);
-}
-
-.end {
-  background: red;
-}
-*/
