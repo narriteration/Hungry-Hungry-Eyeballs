@@ -28,21 +28,32 @@
             $('#redDot').parent().html('');
             console.log('changed red dot position');
         }
-        evaluateIfWinner(el);
+        revealWinner();
     });
 
 ///////////////////// FUNCTIONS BELOW ////////////////////////
 
-    function evaluateIfWinner(el) {
-        if ($('#blueDot').parent() === $('.end')) {
-          console.log("game over! winner is Player Z!");
-        } else if ($('#redDot').parent() === $('.end')){
-          console.log("game over! winner is Player M!");
-        } else {
-          console.log("keep clicking. game still in play!");
-        }
-      };
+    // function evaluateIfWinner(el) {
+    //     if ($('#blueDot').parent() === $('.end')) {
+    //       console.log("game over! winner is Player Z!");
+    //     } else if ($('#redDot').parent() === $('.end')){
+    //       console.log("game over! winner is Player M!");
+    //     } else {
+    //       console.log("keep clicking. game still in play!");
+    //     }
+    //   };
 
+// Jesse's suggestion
+function revealWinner() {
+  var winnerIs = ""
+  if($('#blueDot').parent().hasClass('.end')) {
+    winnerIs = "Blue"
+    console.log("jesses solution with my stuff worked!");
+    return winnerIs;
+
+  }
+  console.log("no winner yet");
+}
 
 //      ALTERNATIVE evaluateIfWinner functions:
 
