@@ -1,15 +1,11 @@
   $(document).ready(function() {
 
-    console.log("My JS is connected! Woohoo!")
-
     $('.messages').html("The eyeballs are salivating. Pick a player, find an opponent, and press your key to start flying forward!");
     $('#startZPink').html(pinkEyeballImage);
     $('#startMGreen').html(greenEyeballImage);
 
     $('button').on('click', function () {
-        console.log("The reset button has been clicked!");
-        $('td').html(''); // clear board
-        console.log("All spaces are cleared.");
+        $('td').html('');
         $('.messages').html("The eyeballs are salivating. Pick a player, find an opponent, and press your key to start flying forward!");
         $('#startZPink').html(pinkEyeballImage);
         $('#startMGreen').html(greenEyeballImage);
@@ -21,16 +17,14 @@
         if (el.which === 90) {
             $('#pinkEyeball').parent().next().html(pinkEyeballImage);
             $('#pinkEyeball').parent().html('');
-            console.log('changed pink flapper position');
         };
         if (el.which === 77) {
             $('#greenEyeball').parent().next().html(greenEyeballImage);
             $('#greenEyeball').parent().html('');
-            console.log('changed green jiggler position');
         }
-        evaluateIfWinner();
+        evaluateIfWinner(); //broken
     });
-}); //end of document ready function
+});
 
 ///////////////////// VARIABLES /////////////////////////
 var $board = $('.board');
@@ -38,11 +32,11 @@ var $messages = $('.messages');
 var $button = $('.btn');
 var pinkEyeballImage = '<img src="assets/flying_pink_eyeball.gif" alt="cute, animated, purple, pixelated eyeball" height = "30" width = "auto" id="pinkEyeball">';
 var greenEyeballImage = '<img src="assets/green_pixel_eyeball.gif" alt="a cute, morphing, animated, green, pixelated eyeball" height = "30" width = "auto" id="greenEyeball">';
-var pizza = '<img src="assets/pizza_gif.gif" alt="pixelated, animated pizza is dripping cheese" align="center" height="30" width="auto"'
+var pizza = '<img src="assets/pizza_gif.gif" alt="pixelated, animated pizza is dripping cheese" align="center" height="30" width="auto">'
 var greenEyeballWinsMessage = 'Green jiggly eyeball wins!';
 var pinkEyeballWInsMessage = 'Pink winged eyeball wins!';
 
-///////////////////// FUNCTIONS  ////////////////////////
+///////////////////// FUNCTIONS  (broken)  ////////////////////////
 
 function evaluateIfWinner(el) {
     if ($('#pinkEyeball').parent().html() === '<img src="assets/flying_pink_eyeball.gif" alt="cute, animated, purple, pixelated eyeball" height = "30" width = "auto" id="pinkEyeball">') {
@@ -51,6 +45,6 @@ function evaluateIfWinner(el) {
       console.log("Game over! Winner is Jiggly Eyeball!");
     } else {
       console.log("Keep clicking. Game still in play!");
-      $('.messages').html('Keep going! The pizza\'s getting cold...');
+      $('.messages').html('<b>Keep going! The pizza\'s getting cold...<b>');
     }
   };

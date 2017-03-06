@@ -3,22 +3,19 @@
 
 <head>
     <meta charset="utf-8">
-    <!-- set viewport to device width to allow responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/main.css">
-    <!-- JS -->
     <script src="http://code.jquery.com/jquery-2.2.2.min.js"></script>
     <script src="scripts/app.js"></script>
 
     <title>Project0 Game | Chelsea Mangold</title>
 </head>
+
 <body>
     <div class="container">
         <center>
-          <img id="titleImage" src="assets/hungryHungryEyeballs.png" alt="Illustrated text that reads: Hungry, hungry eyeballz. The game. With a creepy cute eyeball coming over the 'z'" height="250" width="auto">
+          <img id="titleImage" src="assets/hungryHungryEyeballs.png" alt="Illustrated text that reads: Hungry, hungry eyeballz. The game. With a creepy cute eyeball coming over the 'z'" height="325" width="auto">
         </center>
         <h3 class="text-center">Choose a color and press your key to move your piece forward</h3>
         <div class="messages"></div>
@@ -26,7 +23,7 @@
         <br>
         <button type="button" class="btn-group btn btn-primary">Reset</button>
         <table class="table board">
-            <thead>                                     <!-- creates header for game table-->
+            <thead>
                 <tr>
                     <th></th>
                     <th id="start">Start</th>
@@ -46,7 +43,7 @@
             <br>
             <br>
             <br>
-            <tbody id="playerGameboard">                                     <!-- start of game table for player pieces-->
+            <tbody id="playerGameboard">
                 <tr>
                     <th scope="row">Winged Eyeball! Press z</th>
                     <td id="startZPink"></td>
@@ -82,7 +79,6 @@
         <br>
         <br>
         <br>
-    </div>  <!-- end of container div tag-->
+    </div>
 </body>
-
 </html>
