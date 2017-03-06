@@ -7,9 +7,15 @@
   display: block;
 }
 
+
+
 div.messages {
   text-align: center;
   color: red;
+}
+
+h3 {
+  font-weight:200;
 }
 
 body {

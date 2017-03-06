@@ -3,16 +3,17 @@
     console.log("My JS is connected! Woohoo!")
 
     $('.messages').html("Game is ready. Click Z or M key to begin race");
-    $('#startZBlue').html(blueImage); // point to #startZBlue and insert the html for blueImage
-    $('#startMRed').html(redImage); // point to #startMRed and insert the html for redImage
+    $('#startZBlue').html(blueImage);
+    $('#startMRed').html(redImage);
 
-    $('button').on('click', function () {                       // when button is clicked, run callback function
+    $('button').on('click', function () {
         console.log("The reset button has been clicked!");
         $('td').html(''); // clear board
         console.log("All spaces are cleared.");
-        $('.messages').html("Game is ready. Grab an opponent and click Z or M key to begin racing.");
-        $('#startZBlue').html(blueImage);       // insert blueImage into html of start space
-        $('#startMRed').html(redImage);         // insert redImage into html of start space
+        $('.messages').html("The eyeballs are salivating. Pick a player, find an opponent, and press your key to start flying forward!");
+        $('#startZBlue').html(blueImage);
+        $('#startMRed').html(redImage);
+        $('.end').html(pizza);
     });
 
 
@@ -31,10 +32,10 @@
         evaluateIfWinner();
     });
 
-///////////////////// FUNCTIONS BELOW ////////////////////////
+///////////////////// FUNCTIONS  ////////////////////////
 
     function evaluateIfWinner(el) {
-        if ($('#blueDot').parent() === $('.end')) {
+        if ($('#blueDot').parent().html() === '<img src="assets/flying_pink_eyeball.gif" alt="cute, animated, purple, pixelated eyeball" height = "30" width = "auto" id="blueDot">') {
           console.log("game over! winner is Player Z!");
         } else if ($('#redDot').parent() === $('.end')){
           console.log("game over! winner is Player M!");
@@ -43,40 +44,6 @@
         }
       };
 
-// Jesse's suggestion
-// function revealWinner() {
-//   var winnerIs = ""
-//   if($('#blueDot').parent().hasClass('.end')) {
-//     winnerIs = "Blue"
-//     console.log("jesses solution with my stuff worked!");
-//     return winnerIs;
-//
-//   }
-//   console.log("no winner yet");
-// }
-
-//      ALTERNATIVE evaluateIfWinner functions:
-
-      // function gameIsOver() {
-      //     var winnerPlayer = "";
-      //     if ($('.end').html() === blueImage) {
-      //         winnerPlayer = "Blue / Player Z";
-      //         $('.messages').html("blue wins!");
-      //         alert("stop the game!");
-      //     } else if ($('.end').html() === redImage) {
-      //         winnerPlayer = "Red / Player M";
-      //         $('.messages').html("red wins!");
-      //         alert("stop the game!");
-      //     }
-      // return winnerPlayer;
-      // };
-      //
-      // gameIsOver();
-
-      /////////
-
-
-
 }); // <=====KEEP THIS. Is end of document ready function
 
 var $board = $('.board');
@@ -84,33 +51,6 @@ var $messages = $('.messages');
 var $button = $('.btn');
 var blueImage = '<img src="assets/flying_pink_eyeball.gif" alt="cute, animated, purple, pixelated eyeball" height = "30" width = "auto" id="blueDot">';
 var redImage = '<img src="assets/green_pixel_eyeball.gif" alt="a cute, morphing, animated, green, pixelated eyeball" height = "30" width = "auto" id="redDot">';
+var pizza = '<img src="assets/pizza_gif.gif" alt="pixelated, animated pizza is dripping cheese" align="center" height="30" width="auto"'
 var redWinsMessage = 'Red wins!';
 var blueWinsMessage = 'Blue wins!';
-
-
-// if (   ($('#endZBlue').html()) === blueImage || ($('#endMRed').html()) === redImage  ) {
-//     console.log("Stop the game, you've won!");
-//     alert("Someone wins!")
-
-
-
-// function movePlayerZ() {
-//   if the start box of PlayerZ is !empty,
-//   then listen for a keypress of z
-//   if keypress z, then moveRight
-//
-// }
-//
-// function moveRight() {
-//   if (hasWon === false) then
-//   for
-//   clear current box
-//   find next sibling box
-//   set html to "z" of that box
-// }
-
-// function beginGame() {
-// };
-//
-// function isOver() {
-// };
